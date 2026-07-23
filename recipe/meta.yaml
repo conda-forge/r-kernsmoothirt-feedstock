@@ -1,18 +1,18 @@
-{% set version = "6.4" %}
+{% set version = "6.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-kernsmoothirt
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/KernSmoothIRT_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/KernSmoothIRT/KernSmoothIRT_{{ version }}.tar.gz
-  sha256: 9765e371eb1ae4a2dde948829a9f9edaacff29e9bdd79561bd0955021aab1463
+  sha256: 4fbe416af139a7d53f702fc84766ae4b6d65eaa215aa77717aaffbb6ee8a2ea5
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
